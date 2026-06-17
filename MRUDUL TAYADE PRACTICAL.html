@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TECHFEST 2026 | National Level Technical Symposium</title>
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://jsdelivr.net" rel="stylesheet">
+    <!-- FontAwesome 6 for Icons -->
+    <link href="https://cloudflare.com" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link href="https://googleapis.com" rel="stylesheet">
+    
+    <style>
+        :root {
+            --dark-bg: #0a0f1d;
+            --card-bg: #111827;
+            --neon-blue: #00f2fe;
+            --neon-purple: #4facfe;
+            --text-light: #f3f4f6;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: var(--dark-bg);
+            color: var(--text-light);
+            overflow-x: hidden;
+        }
+
+        .tech-heading {
+            font-family: 'Orbitron', sans-serif;
+            letter-spacing: 2px;
+            background: linear-gradient(45deg, var(--neon-blue), var(--neon-purple));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        /* Navbar Customization */
+        .navbar {
+            background-color: rgba(10, 15, 29, 0.95) !important;
+            border-bottom: 1px solid rgba(0, 242, 254, 0.2);
+            backdrop-filter: blur(10px);
+        }
+
+        .nav-link {
+            color: var(--text-light) !important;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        .nav-link:hover, .nav-link.active {
+            color: var(--neon-blue) !important;
+            text-shadow: 0 0 10px rgba(0, 242, 254, 0.6);
+        }
+
+        /* Hero Section */
+        .hero-section {
+            padding: 150px 0 100px;
+            background: radial-gradient(circle at center, rgba(79, 172, 254, 0.1) 0%, transparent 70%);
+        }
+
+        /* Custom Cards */
+        .tech-card {
+            background-color: var(--card-bg);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            border-radius: 15px;
+            transition: all 0.3s ease;
+        }
+
+        .tech-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--neon-blue);
+            box-shadow: 0 10px 20px rgba(0, 242, 254, 0.1);
+        }
+
+        /* Form Controls */
+        .form-control, .form-select {
+            background-color: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            color: #fff;
+        }
+
+        .form-control:focus, .form-select:focus {
+            background-color: rgba(255, 255, 255, 0.08);
+            border-color: var(--neon-blue);
+            color: #fff;
+            box-shadow: 0 0 10px rgba(0, 242, 254, 0.2);
+        }
+
+        /* Buttons */
+        .btn-neon {
+            background: linear-gradient(45deg, var(--neon-blue), var(--neon-purple));
+            color: #000;
+            font-weight: 600;
+            border: none;
+            transition: all 0.3s ease;
+        }
+
+        .btn-neon:hover {
+            box-shadow: 0 0 15px var(--neon-blue);
+            color: #000;
+            transform: scale(1.02);
+        }
+
+        /* Timeline for Schedule */
+        .timeline-item {
+            border-left: 2px solid var(--neon-blue);
+            padding-left: 20px;
+            position: relative;
+        }
+
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -7px;
+            top: 5px;
+            width: 12px;
+            height: 12px;
+            background: var(--neon-purple);
+            border-radius: 50%;
+            box-shadow: 0 0 8px var(--neon-purple);
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation Header -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand tech-heading fw-bold fs-3" href="#">TECHFEST2026</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <!-- Bootstrap Nav Tabs styled as standard Navbar Links -->
+                <ul class="nav navbar-nav ms-auto" id="techTab" role="tablist">
+                    <li class="nav-item">
+                        <a class="nav-link active" id="home-tab" data-bs-toggle="tab" href="#home" role="tab">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" id="about-tab" data-bs-toggle="tab" href="#about" role="tab">About/Events</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" id="schedule-tab" data-bs-toggle="tab" href="#schedule" role="tab">Schedule</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" id="register-tab" data-bs-toggle="tab" href="#register" role="tab">Register</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" id="contact-tab" data-bs-toggle="tab" href="#contact" role="tab">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content Tab Panes -->
+    <div class="tab-content">
+        
+        <!-- 1. HOME TAB -->
+        <div class="tab-pane fade show active" id="home" role="tabpanel">
+            <section class="hero-section text-center d-flex align-items-center min-vh-100">
+                <div class="container">
+                    <span class="badge bg-danger mb-3 px-3 py-2 text-uppercase tracking-wider">National Level Technical Symposium</span>
+                    <h1 class="display-2 fw-bold tech-heading mb-3">TECHFEST 2026</h1>
+                    <p class="lead text-secondary max-w-2xl mx-auto mb-5">Where Innovation Meets Reality. Join India's brightest minds in a battle of code, design, and technical mastery.</p>
+                    
+                    <!-- Countdown / Key details row -->
+                    <div class="row justify-content-center g-4 mb-5">
+                        <div class="col-6 col-md-3">
+                            <div class="p-3 tech-card">
+                                <h3 class="text-info fw-bold mb-0">15+</h3>
+                                <small class="text-muted">High-Tech Events</small>
+                            </div>
+                        </div>
+                        <div class="col-6 col-md-3">
+                            <div class="p-3 tech-card">
+                                <h3 class="text-info fw-bold mb-0">₹2,00,000+</h3>
+                                <small class="text-muted">Cash Prizes</small>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div>
+                        <button onclick="document.getElementById('register-tab').click();" class="btn btn-neon btn-lg px-5 py-3 me-sm-3 mb-3 mb-sm-0">
+                            <i class="fa-solid fa-rocket me-2"></i>Register Now
+                        </button>
+                        <button onclick="document.getElementById('about-tab').click();" class="btn btn-outline-info btn-lg px-5 py-3">
+                            Explore Events
+                        </button>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- 2. ABOUT & EVENTS TAB -->
+        <div class="tab-pane fade" id="about" role="tabpanel">
+            <section class="py-5 mt-5">
+                <div class="container py-5">
+                    <div class="text-center mb-5">
+                        <h2 class="display-5 fw-bold tech-heading">Featured Flagship Events</h2>
+                        <p class="text-muted">Compete against the best and showcase your technical prowess.</p>
+                    </div>
+
+                    <div class="row g-4">
+                        <!-- Event 1 -->
+                        <div class="col-md-4">
+                            <div class="card tech-card h-100 text-white p-4">
+                                <div class="text-info fs-1 mb-3"><i class="fa-solid fa-code"></i></div>
+                                <h3 class="h4 fw-bold">ByteCraft Hackathon</h3>
+                                <p class="text-muted flex-grow-1">A rigorous 24-hour product development sprint solving real-world infrastructure problems.</p>
+                                <ul class="list-unstyled text-secondary small mb-4">
+                                    <li><i class="fa-solid fa-trophy text-warning me-2"></i>Prize Pool: ₹50,000</li>
+                                    <li><i class="fa-solid fa-users me-2"></i>Team Size: 2-4 Members</li>
+                                </ul>
+                                <button onclick="document.getElementById('register-tab').click();" class="btn btn-outline-light w-100">Join Event</button>
+                            </div>
+                        </div>
+                        <!-- Event 2 -->
+                        <div class="col-md-4">
+                            <div class="card tech-card h-100 text-white p-4">
+                                <div class="text-info fs-1 mb-3"><i class="fa-solid fa-robot"></i></div>
+                                <h3 class="h4 fw-bold">RoboClash</h3>
+                                <p class="text-muted flex-grow-1">Design customized wired or wireless bots to navigate obstacles and fight to survive.</p>
+                                <ul class="list-unstyled text-secondary small mb-4">
